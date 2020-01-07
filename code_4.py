@@ -1,11 +1,7 @@
 import cv2
 import numpy as np
-
 cap = cv2.VideoCapture(1)
-
 while(1):
-
-    # Take each frame
     _, frame = cap.read()
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     
@@ -28,6 +24,5 @@ while(1):
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
         break
-
 cv2.destroyAllWindows()
 cap.release()
